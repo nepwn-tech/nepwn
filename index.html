@@ -1,68 +1,336 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
-    <title>Hangzhou Niepu Technology Co., Ltd.</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        h2 {
-            color: #555;
-            margin-top: 20px;
-        }
-
-        p {
-            color: #777;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        ul {
-            color: #444;
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 5px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="杭州涅普科技有限责任公司 —— K210 SDR 软件定义无线电开发平台，集成 XILINX Zynq-7020 与 AD9361。">
+    <meta name="theme-color" content="#070d1b">
+    <title>杭州涅普科技有限责任公司 | K210 SDR 开发平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-    <h1>Welcome to Hangzhou Niepu Technology Co., Ltd.</h1>
-    <p>Specializing in advanced solutions for Software-Defined Radio (SDR) development.</p>
+    <div class="page-bg" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="bg-glow bg-glow-one"></div>
+        <div class="bg-glow bg-glow-two"></div>
+    </div>
 
-    <h2>Main Business:</h2>
-    <p>The K210 SDR Development Board - Unleash the Power of XILINX Zynq7020+AD9361.</p>
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a class="brand" href="#home" aria-label="涅普科技首页">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <path d="M8 30V10L20 22L32 10V30" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="20" cy="22" r="2.6" fill="currentColor" />
+                    </svg>
+                </span>
+                <span class="brand-text">
+                    <strong>NEPWN</strong>
+                    <small data-i18n="brand.sub">杭州涅普科技</small>
+                </span>
+            </a>
 
-    <h2>Contact Us:</h2>
-    <p>For inquiries and more information, please feel free to <a href="mailto:1399109998@qq.com">contact us</a>.</p>
-	<p>project in  <a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbERzcDZOc2RuTi1DSlNWT3pBdWd2YTR3V3NjUXxBQ3Jtc0tuWXZ1bW9sTjBGdW4wXzI1WnlCcjBqZHduWWo5OWtxT095a0d4ZXMwX1JuV1VFQ1VKOTVlXzJGWkxieGs0eHl2NlNwSTk0aXhlcDZxZ3dhM0RSOEZpRWhrek1xcF83VEViYTR3SzVZLTFIYlZYRkd3TQ&q=https%3A%2F%2Fgithub.com%2Fkangyuzhe666%2FZYNQ7010-7020_AD9363&v=Qk-M8yRsKvs">github</a>.</p>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/Qk-M8yRsKvs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <h2>Key Features of K210 SDR Development Platform:</h2>
-    <ul>
-        <li>Integrated XILINX Zynq 7020+AD9361 solution</li>
-        <li>Four-core ARM Cortex-A9 processor and FPGA programmable logic</li>
-        <li>1GB high-speed DDR3 SDRAM and 256Mb QSPI FLASH</li>
-        <li>Rich peripheral interfaces including BTB, USB2.0OTG, Gigabit Ethernet, UART, SD card, JTAG, and more</li>
-        <li>LVDs and CMOs communication modes with AD9361 chip</li>
-        <li>Designed for high-speed data exchange, storage, video transmission, deep learning, AI, and industrial control</li>
-        <li>Perfect for communication algorithm development, students, engineers, and more</li>
-    </ul>
+            <nav class="nav-links" id="navLinks" aria-label="主导航">
+                <a href="#home" data-i18n="nav.home" class="active">首页</a>
+                <a href="#product" data-i18n="nav.product">产品</a>
+                <a href="#features" data-i18n="nav.features">核心特性</a>
+                <a href="#applications" data-i18n="nav.applications">应用场景</a>
+                <a href="#contact" data-i18n="nav.contact">联系我们</a>
+            </nav>
 
-    <p>Stay ahead in the world of software-defined radio with Hangzhou Niepu Technology Co., Ltd.'s K210 SDR development platform!</p>
+            <div class="nav-actions">
+                <div class="lang-switch" role="group" aria-label="语言切换 / Language">
+                    <button type="button" class="lang-btn active" data-lang="zh" aria-pressed="true">中</button>
+                    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+                <a class="btn btn-sm btn-primary nav-cta" href="#contact" data-i18n="nav.cta">联系我们</a>
+                <button type="button" class="menu-toggle" id="menuToggle" aria-label="打开菜单" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero.eyebrow">软件定义无线电开发平台</span></div>
+                    <h1 data-i18n="hero.title">让无线电，<br>随软件而动。</h1>
+                    <p class="hero-sub" data-i18n="hero.subtitle">以 K210 SDR 开发板为核心，集成 XILINX Zynq-7020 与 AD9361，为通信算法、人工智能与工业控制打造高性能开发底座。</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#product"><span data-i18n="hero.ctaPrimary">探索 K210</span>
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </a>
+                        <a class="btn btn-ghost" href="https://github.com/kangyuzhe666/ZYNQ7010-7020_AD9363" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.7a8.3 8.3 0 0 0-2.6 16.2c.4.1.6-.2.6-.4v-1.6c-2.4.5-2.9-1.1-2.9-1.1-.4-1-1-1.3-1-1.3-.8-.5.1-.5.1-.5.9.1 1.4.9 1.4.9.8 1.4 2.1 1 2.6.8.1-.6.3-1 .6-1.3-2-.2-4.1-1-4.1-4.5 0-1 .4-1.8 1-2.4-.1-.3-.4-1.2.1-2.4 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 4.9 0c1.9-1.3 2.7-1 2.7-1 .5 1.2.2 2.1.1 2.4.6.6 1 1.4 1 2.4 0 3.5-2.1 4.3-4.1 4.5.3.3.6.9.6 1.8v2.7c0 .2.2.5.6.4A8.3 8.3 0 0 0 10 1.7Z" /></svg>
+                            <span data-i18n="hero.ctaSecondary">开源项目</span>
+                        </a>
+                    </div>
+                    <p class="hero-company" data-i18n="hero.company">杭州涅普科技有限责任公司 · Hangzhou Niepu Technology Co., Ltd.</p>
+                </div>
+
+                <div class="hero-visual reveal" aria-label="K210 SDR 开发板示意图">
+                    <div class="visual-orbit orbit-one" aria-hidden="true"></div>
+                    <div class="visual-orbit orbit-two" aria-hidden="true"></div>
+                    <div class="visual-chip-wrap">
+                        <svg class="board-svg" viewBox="0 0 560 400" role="img" aria-label="K210 SDR 开发板功能框图">
+                            <defs>
+                                <linearGradient id="pcb" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#173a52" />
+                                    <stop offset="100%" stop-color="#0c1d31" />
+                                </linearGradient>
+                                <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1d2b49" />
+                                    <stop offset="100%" stop-color="#0d1730" />
+                                </linearGradient>
+                                <linearGradient id="rf" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#0f4f5e" />
+                                    <stop offset="100%" stop-color="#0b2a3d" />
+                                </linearGradient>
+                                <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+                                    <feGaussianBlur stdDeviation="7" />
+                                </filter>
+                            </defs>
+
+                            <rect x="26" y="28" width="508" height="344" rx="22" fill="url(#pcb)" stroke="#2f6c85" stroke-width="1.5" />
+                            <rect x="38" y="40" width="484" height="320" rx="16" fill="none" stroke="#214c63" stroke-width="1" stroke-dasharray="4 6" />
+
+                            <g stroke="#2c7d96" stroke-width="2" fill="none" opacity=".75">
+                                <path d="M60 96h72v54" />
+                                <path d="M60 130h42v96h76" />
+                                <path d="M500 98h-70v60" />
+                                <path d="M500 132h-44v92h-70" />
+                                <path d="M150 350v-42h90" />
+                                <path d="M410 350v-42h-90" />
+                                <path d="M280 40v34" />
+                                <path d="M280 360v-28" />
+                            </g>
+
+                            <g opacity=".9">
+                                <circle cx="60" cy="96" r="3" fill="#3ddad7" />
+                                <circle cx="500" cy="98" r="3" fill="#3ddad7" />
+                                <circle cx="178" cy="280" r="3" fill="#3ddad7" />
+                                <circle cx="386" cy="280" r="3" fill="#3ddad7" />
+                            </g>
+
+                            <rect x="212" y="136" width="136" height="120" rx="10" fill="url(#chip)" stroke="#4a8fb0" stroke-width="1.5" />
+                            <rect x="224" y="148" width="112" height="96" rx="6" fill="#0a1528" stroke="#2c5875" />
+                            <text x="280" y="188" text-anchor="middle" fill="#d9f4ff" font-size="17" font-weight="700" font-family="Arial, sans-serif">Zynq-7020</text>
+                            <text x="280" y="212" text-anchor="middle" fill="#63c8e8" font-size="10.5" font-family="Arial, sans-serif">ARM + FPGA SoC</text>
+                            <g stroke="#4a8fb0" stroke-width="2">
+                                <path d="M212 156h-12m12 20h-12m12 20h-12m12 20h-12m12 20h-12" />
+                                <path d="M348 156h12m-12 20h12m-12 20h12m-12 20h12m-12 20h12" />
+                            </g>
+
+                            <rect x="64" y="78" width="106" height="72" rx="8" fill="url(#rf)" stroke="#2d9aa4" stroke-width="1.5" />
+                            <text x="117" y="108" text-anchor="middle" fill="#c8fbf6" font-size="16" font-weight="700" font-family="Arial, sans-serif">AD9361</text>
+                            <text x="117" y="128" text-anchor="middle" fill="#6ed3d1" font-size="9.5" font-family="Arial, sans-serif" data-i18n="board.rf">射频收发器</text>
+
+                            <rect x="390" y="78" width="106" height="72" rx="8" fill="url(#chip)" stroke="#4a8fb0" stroke-width="1.5" />
+                            <text x="443" y="108" text-anchor="middle" fill="#d9f4ff" font-size="15" font-weight="700" font-family="Arial, sans-serif">DDR3</text>
+                            <text x="443" y="128" text-anchor="middle" fill="#63c8e8" font-size="9.5" font-family="Arial, sans-serif">1GB SDRAM</text>
+
+                            <rect x="64" y="234" width="100" height="60" rx="8" fill="url(#chip)" stroke="#4a8fb0" stroke-width="1.5" />
+                            <text x="114" y="263" text-anchor="middle" fill="#d9f4ff" font-size="13" font-weight="700" font-family="Arial, sans-serif">QSPI</text>
+                            <text x="114" y="281" text-anchor="middle" fill="#63c8e8" font-size="9.5" font-family="Arial, sans-serif">256Mb FLASH</text>
+
+                            <rect x="396" y="234" width="100" height="60" rx="8" fill="url(#chip)" stroke="#4a8fb0" stroke-width="1.5" />
+                            <text x="446" y="263" text-anchor="middle" fill="#d9f4ff" font-size="13" font-weight="700" font-family="Arial, sans-serif" data-i18n="board.io">外设接口</text>
+                            <text x="446" y="281" text-anchor="middle" fill="#63c8e8" font-size="9" font-family="Arial, sans-serif">USB / ETH / SD</text>
+
+                            <g fill="#7de3e8" filter="url(#softGlow)" opacity=".55">
+                                <circle cx="117" cy="52" r="7" /><circle cx="443" cy="52" r="7" />
+                                <circle cx="117" cy="348" r="7" /><circle cx="446" cy="348" r="7" />
+                            </g>
+                            <g fill="#bff6f7">
+                                <circle cx="117" cy="52" r="3.2" /><circle cx="443" cy="52" r="3.2" />
+                                <circle cx="117" cy="348" r="3.2" /><circle cx="446" cy="348" r="3.2" />
+                            </g>
+                            <text x="280" y="62" text-anchor="middle" fill="#5c9bb8" font-size="10" font-family="Arial, sans-serif" letter-spacing="3">NEPWN · K210 SDR</text>
+                        </svg>
+                    </div>
+                    <div class="visual-tag tag-a"><span class="tag-dot"></span><span data-i18n="board.tagA">4 核 ARM Cortex-A9</span></div>
+                    <div class="visual-tag tag-b"><span class="tag-dot"></span><span data-i18n="board.tagB">LVDS / CMOS</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-band" aria-label="平台关键参数">
+            <div class="container stats-grid">
+                <div class="stat reveal"><strong>Zynq-7020</strong><span data-i18n="stat.soc">XILINX SoC</span></div>
+                <div class="stat reveal"><strong>AD9361</strong><span data-i18n="stat.rf">射频收发芯片</span></div>
+                <div class="stat reveal"><strong>1 GB</strong><span data-i18n="stat.ddr">高速 DDR3 SDRAM</span></div>
+                <div class="stat reveal"><strong>256 Mb</strong><span data-i18n="stat.flash">QSPI FLASH</span></div>
+            </div>
+        </section>
+
+        <section class="section" id="product">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-kicker" data-i18n="product.kicker">旗舰产品</span>
+                    <h2 data-i18n="product.title">K210 SDR 开发平台</h2>
+                    <p data-i18n="product.subtitle">释放 XILINX Zynq-7020 + AD9361 的强大潜能，让软件定义无线电开发更简单、更高效。</p>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card reveal">
+                        <div class="product-card-top">
+                            <span class="product-badge" data-i18n="product.badge">SDR 开发板</span>
+                            <span class="product-model">K210</span>
+                        </div>
+                        <h3 data-i18n="product.cardTitle">一体化软件定义无线电解决方案</h3>
+                        <p data-i18n="product.cardText">将四核 ARM 处理器、FPGA 可编程逻辑与高性能射频收发器集成于一块开发板，覆盖从算法验证到原型交付的完整链路。</p>
+                        <div class="tag-list">
+                            <span class="tag">Zynq-7020</span>
+                            <span class="tag">AD9361</span>
+                            <span class="tag">Gigabit Ethernet</span>
+                            <span class="tag">USB 2.0 OTG</span>
+                            <span class="tag">JTAG</span>
+                        </div>
+                    </article>
+
+                    <article class="video-card reveal">
+                        <div class="video-poster" id="videoPoster" role="button" tabindex="0" aria-label="播放 K210 演示视频">
+                            <div class="video-waves" aria-hidden="true">
+                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="play-circle" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z" /></svg>
+                            </div>
+                            <div class="video-caption">
+                                <strong data-i18n="video.title">K210 实战演示</strong>
+                                <span data-i18n="video.hint">点击观看演示视频</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="features">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-kicker" data-i18n="features.kicker">为什么选择 K210</span>
+                    <h2 data-i18n="features.title">为硬核开发而生</h2>
+                    <p data-i18n="features.subtitle">从射频前端到可编程逻辑，每一项设计都面向真实的工程需求。</p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.7" /><path d="M9 9h6v6H9zM9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+                        </div>
+                        <h3 data-i18n="feature.1t">高度集成的方案</h3>
+                        <p data-i18n="feature.1d">集成 XILINX Zynq 7020 + AD9361 一体化方案。</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.7" /><path d="M8 10h8m-8 4h5M12 3v3m0 12v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+                        </div>
+                        <h3 data-i18n="feature.2t">ARM + FPGA 异构架构</h3>
+                        <p data-i18n="feature.2d">四核 ARM Cortex-A9 处理器与 FPGA 可编程逻辑。</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.7" /><path d="M7 10v4m4-4v4m4-4v4m4-4v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+                        </div>
+                        <h3 data-i18n="feature.3t">大容量高速存储</h3>
+                        <p data-i18n="feature.3d">1GB 高速 DDR3 SDRAM 与 256Mb QSPI FLASH。</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="8" width="7" height="8" rx="1.5" stroke="currentColor" stroke-width="1.7" /><rect x="14.5" y="8" width="7" height="8" rx="1.5" stroke="currentColor" stroke-width="1.7" /><path d="M9.5 12h5M6 8V5m12 3V5M6 16v3m12-3v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+                        </div>
+                        <h3 data-i18n="feature.4t">丰富外设接口</h3>
+                        <p data-i18n="feature.4d">BTB、USB 2.0 OTG、千兆以太网、UART、SD 卡、JTAG 等。</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h2.5l2-6 3 12 3-9 2.5 6H21" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </div>
+                        <h3 data-i18n="feature.5t">双模式射频通信</h3>
+                        <p data-i18n="feature.5d">支持与 AD9361 芯片的 LVDS 与 CMOS 通信模式。</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7" /><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7" /><path d="M12 3.5v5.5m0 6v5.5M3.5 12H9m6 0h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+                        </div>
+                        <h3 data-i18n="feature.6t">面向多样负载</h3>
+                        <p data-i18n="feature.6d">适用于高速数据交换、存储、视频传输、深度学习、AI 与工业控制。</p>
+                    </article>
+                    <article class="feature-card feature-card-wide reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5-9-5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /><path d="M6.5 11v5c0 1.7 2.5 3 5.5 3s5.5-1.3 5.5-3v-5M21 9v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+                        </div>
+                        <div>
+                            <h3 data-i18n="feature.7t">友好的开发生态</h3>
+                            <p data-i18n="feature.7d">非常适合通信算法开发、学生、工程师及更多开发者快速上手。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="applications">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-kicker" data-i18n="apps.kicker">应用场景</span>
+                    <h2 data-i18n="apps.title">从算法验证到产品落地</h2>
+                    <p data-i18n="apps.subtitle">一块开发板，覆盖无线通信与边缘智能的典型工作流。</p>
+                </div>
+
+                <div class="app-grid">
+                    <div class="app-item reveal"><span class="app-index">01</span><h3 data-i18n="app.1">高速数据交换</h3><p data-i18n="app.1d">板内高速互联与实时传输</p></div>
+                    <div class="app-item reveal"><span class="app-index">02</span><h3 data-i18n="app.2">数据存储</h3><p data-i18n="app.2d">高速缓存与采集记录</p></div>
+                    <div class="app-item reveal"><span class="app-index">03</span><h3 data-i18n="app.3">视频传输</h3><p data-i18n="app.3d">低延时视频链路验证</p></div>
+                    <div class="app-item reveal"><span class="app-index">04</span><h3 data-i18n="app.4">深度学习与 AI</h3><p data-i18n="app.4d">FPGA 加速推理实验</p></div>
+                    <div class="app-item reveal"><span class="app-index">05</span><h3 data-i18n="app.5">工业控制</h3><p data-i18n="app.5d">确定性实时控制原型</p></div>
+                    <div class="app-item reveal"><span class="app-index">06</span><h3 data-i18n="app.6">通信算法开发</h3><p data-i18n="app.6d">SDR 波形与协议快速验证</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="contact-panel reveal">
+                    <div class="contact-copy">
+                        <span class="section-kicker" data-i18n="contact.kicker">联系我们</span>
+                        <h2 data-i18n="contact.title">聊聊你的下一个项目</h2>
+                        <p data-i18n="contact.text">如需咨询报价、技术支持或合作事宜，欢迎随时联系我们。</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a class="btn btn-primary" href="mailto:1399109998@qq.com">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8" /><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                            1399109998@qq.com
+                        </a>
+                        <a class="btn btn-ghost" href="https://github.com/kangyuzhe666/ZYNQ7010-7020_AD9363" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.7a8.3 8.3 0 0 0-2.6 16.2c.4.1.6-.2.6-.4v-1.6c-2.4.5-2.9-1.1-2.9-1.1-.4-1-1-1.3-1-1.3-.8-.5.1-.5.1-.5.9.1 1.4.9 1.4.9.8 1.4 2.1 1 2.6.8.1-.6.3-1 .6-1.3-2-.2-4.1-1-4.1-4.5 0-1 .4-1.8 1-2.4-.1-.3-.4-1.2.1-2.4 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 4.9 0c1.9-1.3 2.7-1 2.7-1 .5 1.2.2 2.1.1 2.4.6.6 1 1.4 1 2.4 0 3.5-2.1 4.3-4.1 4.5.3.3.6.9.6 1.8v2.7c0 .2.2.5.6.4A8.3 8.3 0 0 0 10 1.7Z" /></svg>
+                            <span data-i18n="contact.github">查看开源项目</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="brand-mark small" aria-hidden="true">
+                    <svg viewBox="0 0 40 40" fill="none"><path d="M8 30V10L20 22L32 10V30" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </span>
+                <span data-i18n="footer.company">杭州涅普科技有限责任公司</span>
+            </div>
+            <p data-i18n="footer.copy">© 2026 杭州涅普科技有限责任公司 · 保留所有权利</p>
+            <a href="#home" data-i18n="footer.top">返回顶部 ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
