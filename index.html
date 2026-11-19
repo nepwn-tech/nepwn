@@ -36,6 +36,7 @@
             <nav class="nav-links" id="navLinks" aria-label="主导航">
                 <a href="#home" data-i18n="nav.home" class="active">首页</a>
                 <a href="#product" data-i18n="nav.product">产品</a>
+                <a href="#manual" data-i18n="nav.manual">用户手册</a>
                 <a href="#features" data-i18n="nav.features">核心特性</a>
                 <a href="#applications" data-i18n="nav.applications">应用场景</a>
                 <a href="#contact" data-i18n="nav.contact">联系我们</a>
@@ -208,6 +209,155 @@
                         </div>
                     </article>
                 </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="manual">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-kicker" data-i18n="manual.kicker">配套文档</span>
+                    <h2 data-i18n="manual.title">用户手册 · 完整技术资料</h2>
+                    <p data-i18n="manual.subtitle">从板载资源到芯片参数、接口定义、射频指标与 Vivado 约束，全部整理在一本手册中，可在线阅读或下载留存。</p>
+                </div>
+
+                <div class="manual-hero reveal">
+                    <div class="manual-cover" aria-hidden="true">
+                        <div class="cover-top"><span>NEPTUNE SDR</span><span>K210</span></div>
+                        <div class="cover-title">Neptune SDR K210<br><strong>用户手册</strong></div>
+                        <div class="cover-sub">Zynq7020 + AD9361 开发平台 · 2022 款</div>
+                        <div class="cover-lines"><i></i><i></i><i></i><i></i><i></i></div>
+                        <div class="cover-bottom">杭州涅普科技有限责任公司</div>
+                    </div>
+                    <div class="manual-info">
+                        <div class="manual-meta">
+                            <div><strong>26</strong><span data-i18n="manual.pages">页完整文档</span></div>
+                            <div><strong>12</strong><span data-i18n="manual.sections">个技术章节</span></div>
+                            <div><strong>PDF</strong><span data-i18n="manual.format">离线可读</span></div>
+                        </div>
+                        <p data-i18n="manual.intro">手册基于 XILINX Zynq7020 + AD9361 开发平台（型号 K210）编写，系统介绍开发板的最小系统、PS/PL 资源、外设接口、AD9361 射频收发链路以及 Vivado 引脚约束，适合快速上手与二次开发参考。</p>
+                        <div class="manual-actions">
+                            <a class="btn btn-primary" href="assets/manual/Neptune-SDR-K210-User-Manual.pdf" download="Neptune-SDR-K210-用户手册.pdf">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                                <span data-i18n="manual.download">下载手册 PDF · 2.1 MB</span>
+                            </a>
+                            <a class="btn btn-ghost" href="#manualPreview"><span data-i18n="manual.online">在线阅读</span></a>
+                        </div>
+                        <p class="manual-support" data-i18n="manual.support">技术支持：neptunesdr@163.com · 淘宝：涅普科技SDR</p>
+                    </div>
+                </div>
+
+                <div class="manual-chapters reveal">
+                    <h3 data-i18n="manual.chapterTitle">手册章节导览</h3>
+                    <div class="chapter-grid">
+                        <details class="chapter" open>
+                            <summary><span class="chapter-no">01</span><span data-i18n="chapter.1t">开发板简介</span></summary>
+                            <p data-i18n="chapter.1d">XC7Z020 + 2×DDR3 + AD9361 + QSPI FLASH 最小系统；TYPE-C OTG、千兆网口、USB DEBUG、Micro SD、BTB 扩展口与射频 SMA 接口等板载资源。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">02</span><span data-i18n="chapter.2t">ZYNQ 芯片</span></summary>
+                            <p data-i18n="chapter.2d">XC7Z020-1CLG400I；PS 端双核 ARM Cortex-A9 最高 1GHz，PL 端 85K Logic Cells、220 DSP Slice 与 4.9Mb Block RAM。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">03</span><span data-i18n="chapter.3t">DDR 芯片</span></summary>
+                            <p data-i18n="chapter.3d">2 片美光 MT41K256M16TW-107，32 位数据总线、1GB 容量，最高 533MHz（数据速率 1066Mbps）。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">04</span><span data-i18n="chapter.4t">QSPI Flash</span></summary>
+                            <p data-i18n="chapter.4d">W25Q256FVEIG，256Mbit、4 位带宽、3.3V CMOS；用于存储启动镜像、FPGA bit 文件与用户数据。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">05</span><span data-i18n="chapter.5t">PS 系统时钟源</span></summary>
+                            <p data-i18n="chapter.5d">板载 X1 晶振提供 33.333MHz 时钟，接入 ZYNQ BANK500 的 PS_REF_CLK_500 管脚。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">06</span><span data-i18n="chapter.6t">结构图</span></summary>
+                            <p data-i18n="chapter.6d">开发板整体结构示意图，标明各功能单元、芯片与接口的位置关系。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">07</span><span data-i18n="chapter.7t">BTB 连接器管脚定义</span></summary>
+                            <p data-i18n="chapter.7d">61083-044402LF 连接器，接 Zynq BANK35、3.3V 电平；完整 40 针管脚对照表见手册第 13 页。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">08</span><span data-i18n="chapter.8t">USB 2.0 接口</span></summary>
+                            <p data-i18n="chapter.8d">TYPE-C 接口、OTG 模式，USB3320C PHY，可连接 PC、树莓派等上位机设备。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">09</span><span data-i18n="chapter.9t">千兆以太网接口</span></summary>
+                            <p data-i18n="chapter.9d">RTL8211E-VL PHY，RGMII 连接 PS 端，支持 10/100/1000Mbps 网络数据交换。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">10</span><span data-i18n="chapter.10t">UART 接口</span></summary>
+                            <p data-i18n="chapter.10d">PS 端引出 UART1，TXD 接 MIO48、RXD 接 MIO49。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">11</span><span data-i18n="chapter.11t">SD 卡槽</span></summary>
+                            <p data-i18n="chapter.11d">Micro SD 接口，BANK501 的 1.8V IO 经 TXS02612 转换至 3.3V，CD 引脚接 MIO47；存放 BOOT 程序、内核与文件系统。</p>
+                        </details>
+                        <details class="chapter">
+                            <summary><span class="chapter-no">12</span><span data-i18n="chapter.12t">AD9361</span></summary>
+                            <p data-i18n="chapter.12d">70MHz–6GHz 射频收发器，12 位 ADC/DAC、2TX/2RX、56MHz 瞬时带宽；含射频发射/接收指标与 LVDS、CMOS 两套 Vivado XDC 约束。</p>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="manual-specs reveal">
+                    <h3 data-i18n="manual.specTitle">关键规格速查</h3>
+                    <div class="spec-grid">
+                        <div class="spec-card">
+                            <h4 data-i18n="spec.soc">ZYNQ-7020 可编程逻辑</h4>
+                            <table>
+                                <tr><td>Logic Cells</td><td>85K</td></tr>
+                                <tr><td>Look-Up Tables</td><td>53,200</td></tr>
+                                <tr><td>CLB Flip-Flops</td><td>106,400</td></tr>
+                                <tr><td>DSP Slices</td><td>220</td></tr>
+                                <tr><td>Block RAM</td><td>4.9 Mb</td></tr>
+                                <tr><td>LVDS Pairs</td><td>47</td></tr>
+                                <tr><td>IO / MIO</td><td>94 / 8</td></tr>
+                            </table>
+                        </div>
+                        <div class="spec-card">
+                            <h4 data-i18n="spec.board">板载存储与接口</h4>
+                            <table>
+                                <tr><td>DDR3 SDRAM</td><td>2 × 512 MB</td></tr>
+                                <tr><td>QSPI FLASH</td><td>256 Mbit</td></tr>
+                                <tr><td>USB 2.0 OTG</td><td>TYPE-C · USB3320C</td></tr>
+                                <tr><td>Ethernet</td><td>10/100/1000M · RTL8211E</td></tr>
+                                <tr><td>UART</td><td>UART1 · MIO48/49</td></tr>
+                                <tr><td>SD / JTAG</td><td>Micro SD · USB DEBUG</td></tr>
+                                <tr><td>Expansion</td><td>40-pin BTB · 3.3V</td></tr>
+                            </table>
+                        </div>
+                        <div class="spec-card">
+                            <h4 data-i18n="spec.rf">AD9361 射频指标</h4>
+                            <table>
+                                <tr><td>Frequency</td><td>70 MHz – 6 GHz</td></tr>
+                                <tr><td>ADC / DAC</td><td>12 bit</td></tr>
+                                <tr><td>Channels</td><td>2 TX / 2 RX</td></tr>
+                                <tr><td>Instant BW</td><td>up to 56 MHz</td></tr>
+                                <tr><td>Max Data Rate</td><td>122.88 Msps</td></tr>
+                                <tr><td>RX Sensitivity</td><td>−90 dBm @ 20 MHz</td></tr>
+                                <tr><td>TX Power</td><td>&lt; 5 dBm @ 1 GHz CW</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manual-preview reveal" id="manualPreview">
+                    <div class="preview-head">
+                        <h3 data-i18n="manual.previewTitle">手册在线预览</h3>
+                        <a href="assets/manual/Neptune-SDR-K210-User-Manual.pdf" target="_blank" rel="noopener noreferrer" data-i18n="manual.openNew">在新窗口打开 ↗</a>
+                    </div>
+                    <iframe src="assets/manual/Neptune-SDR-K210-User-Manual.pdf" title="Neptune SDR K210 用户手册预览" loading="lazy"></iframe>
+                </div>
+
+                <details class="compliance reveal">
+                    <summary data-i18n="compliance.title">合规与版权声明要点</summary>
+                    <div class="compliance-body">
+                        <p data-i18n="compliance.1">本产品仅供研究学习使用，请在合法合规范围内使用；因使用本产品引起的纠纷与后果由购买方自行承担。</p>
+                        <p data-i18n="compliance.2">产品符合微功率短距离无线电发射设备 F 类技术要求，不得擅自改变使用场景、扩大发射频率范围、加大发射功率或更换天线，不得对其他合法无线电台站产生有害干扰。</p>
+                        <p data-i18n="compliance.3">手册版权归涅普科技所有，未经书面授权不得以任何方式修改、分发、复制或摘编；完整声明请见 PDF 原文第 3–5 页。</p>
+                    </div>
+                </details>
             </div>
         </section>
 
